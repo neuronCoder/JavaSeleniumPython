@@ -16,9 +16,35 @@
     <artifactId>webdrivermanager</artifactId>
     <version>5.1.1</version>
 </dependency>
-
+<dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.8</version>
+      <scope>test</scope>
+    </dependency>
 
 </dependencies>  
 
+<build>
+
+<plugins>
+   
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+        <includes>
+        	<include>Flipkart.java</include>        
+        </includes>    
+          <fork>true</fork>
+          <executable>"C:\Program Files\Java\jdk1.8.0_321\bin\javac.exe"</executable>   
+        </configuration>
+      </plugin>
+  
+</plugins>
+
+
+</build>
   
 </project>
